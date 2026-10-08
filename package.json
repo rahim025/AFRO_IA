@@ -1,0 +1,14 @@
+{
+  "name": "afroia",
+  "version": "0.1.0",
+  "description": "AfroIA – plateforme d'IA pour entrepreneurs, étudiants et créateurs africains",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": { "node": "20.x" },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

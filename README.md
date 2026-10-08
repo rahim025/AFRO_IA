@@ -1,15 +1,17 @@
-# AfroIA – base du site
+# AfroIA
 
-Site statique, sans dépendance ni étape de build.
+Serveur Node/Express qui sert le site (`public/`) et, plus tard, l'API IA (`/api/...`).
 
 ```
-index.html              page d'accueil
-assets/css/style.css    styles (variables en haut du fichier)
-assets/img/logo.svg     logo et favicon
+server.js               serveur Express + routes API
+public/index.html       page d'accueil
+public/assets/          styles et images
+render.yaml             configuration Render (Web Service)
 ```
 
-Prochaines étapes prévues : une page par outil (`/publicite`, `/cv`, `/publications`, `/idees`),
-puis l'inscription, l'appel à l'IA côté serveur et les paiements.
-Les 4 outils ont déjà un attribut `data-tool` pour s'y accrocher.
+Lancer en local : `npm install` puis `npm start` (http://localhost:3000).
 
-Déploiement : GitHub Pages, Netlify ou Render (site statique), dossier racine = ce dossier.
+Render : New → Web Service → dépôt `afroia` → Build `npm install`, Start `npm start`.
+Les clés (Groq, etc.) vont dans Environment sur Render, jamais dans le code.
+
+Étapes prévues : pages des outils, inscription, appels IA côté serveur, paiements.
