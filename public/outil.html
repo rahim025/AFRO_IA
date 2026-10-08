@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outil – AfroIA</title>
+  <meta name="theme-color" content="#1B2A5C">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="hero hero--compact">
+    <div class="container">
+      <nav class="topbar" aria-label="Navigation principale">
+        <a class="brand" href="/" aria-label="AfroIA, accueil"><img src="assets/img/logo.svg" width="40" height="40" alt=""><span>AfroIA</span></a>
+        <a class="link-light" href="/#outils">Tous les outils</a>
+      </nav>
+    </div>
+    <div class="weave" aria-hidden="true"></div>
+  </header>
+
+  <main class="section">
+    <div class="container workspace">
+      <h1 id="titre">Chargement…</h1>
+      <p class="section__intro" id="intro"></p>
+      <form id="form" novalidate></form>
+
+      <section id="resultat" class="result" aria-live="polite" hidden>
+        <h2>Résultat</h2>
+        <div id="sortie" class="result__text"></div>
+        <div class="result__actions">
+          <button type="button" class="btn btn--wide" id="pdf">Télécharger en PDF</button>
+          <button type="button" class="btn btn--ghost" id="copier">Copier</button>
+          <button type="button" class="btn btn--ghost" id="reessayer">Réessayer</button>
+        </div>
+        <p class="result__note" id="reste"></p>
+      </section>
+      <p class="alert" id="erreur" role="alert" hidden></p>
+    </div>
+  </main>
+  <script src="assets/js/tool.js"></script>
+</body>
+</html>
